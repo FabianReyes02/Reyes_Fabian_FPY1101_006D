@@ -2,9 +2,10 @@
 import funciones as f
 import time
 #While para el menu principal del programa
+print("*** Bienvenido a la tienda RR ***")
 while True:
     try:
-        eleccion=int(input("*** Bienvenido a la tienda RR ***\n\n1.-Agregar producto\n2.-Ver todos los productos\n3.-Modificar un producot\n4.-Eliminar un producto\n5.-Guardar una colección en un archivo\n6.-Salir del programa\n:"))
+        eleccion=int(input("\n\n1.-Agregar producto\n2.-Ver todos los productos\n3.-Modificar un producot\n4.-Eliminar un producto\n5.-Guardar una colección en un archivo\n6.-Salir del programa\n:"))
     except:
         print("Ingrese una opción valida")    
     else:
@@ -15,7 +16,7 @@ while True:
             print("Usted va a ver todos los productos.\n")
             f.ver_productos()
         elif eleccion==3:
-            print("Usted va a modificar un procuto.\n")
+            print("Usted va a modificar un producto.\n")
             f.ver_productos()
         elif eleccion==4:
             f.eliminar_productos()
