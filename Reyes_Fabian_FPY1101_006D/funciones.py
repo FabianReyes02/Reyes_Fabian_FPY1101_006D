@@ -59,7 +59,5 @@ def guardar_archivos():
     with open('Reyes_Fabian_FPY1101_006D/usuarios.csv', 'r')as archivo_csv:
         lector_csv=csv.DictReader(archivo_csv)
         productos=list(lector_csv)
-        for i in range(1, len(archivo_csv)):
-            for j in range(len(archivo_csv)):
-                print(archivo_csv)
-        print('')
+        for productos in productos:
+            print(productos)
