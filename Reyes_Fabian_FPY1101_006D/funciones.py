@@ -39,12 +39,6 @@ def modificar_productos():
         print("Producto no encontrado")
     if producto in productos:
         print()
-
-
-
-
-
-
 def eliminar_productos():
     print("Usted va a eliminar un producto.\n")
     producto=input("Que producto desea eliminar: ")
@@ -63,9 +57,5 @@ def eliminar_productos():
             else:
                 print("Yapue escriba las cosas bien")
 def guardar_archivos():
-    print("Usted va a guardar una colección.\n")
-    with open('Reyes_Fabian_FPY1101_006D/usuarios.csv', 'r')as archivo_csv:
-        lector_csv=csv.DictReader(archivo_csv)
-        productos=list(lector_csv)
-        for productos in productos:
-            print(productos)
+    archivo=open('Reyes_Fabian_FPY1101_006D/Reyes_Fabian_FPY1101_006D/usuarios.csv', 'a')
+    archivo.write(f"{codigos},{productos},{cantidades},{precios}\n")
