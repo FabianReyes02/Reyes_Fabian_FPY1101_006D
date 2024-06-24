@@ -9,8 +9,8 @@ productos=[]
 
 
 
-def agregar_productos():
-    cosas=input("Ingrese el nombre del producto")
+def agregar_productos(productos):
+    cosas=input("Ingrese el nombre del producto: ")
     productos.append(cosas)
 
 
@@ -18,15 +18,16 @@ def agregar_productos():
 
 
 
-def ver_productos():
+def ver_productos(productos):
     print(productos,end="")
+print()
 
 
 
 
 
-def modificar_productos():
-    producto=input("Que producto desea modificar")
+def modificar_productos(productos):
+    producto=input("Que producto desea modificar: ")
     if producto not in producto:
         print("Producto no encontrado")
     if producto in productos:
@@ -37,16 +38,21 @@ def modificar_productos():
 
 
 
-def eliminar_productos():
-    producto=input("Que producto desea eliminar")
+def eliminar_productos(productos):
+    producto=input("Que producto desea eliminar: ")
     if producto not in producto:
         print("Producto no encontrado")
     if producto in productos:
-        print()
+        ask=input("Estas seguro de eliminar este producto  Si/No")
+        if ask=="Si":
+            productos.remove(producto)
+        elif ask=="No":
+            print()
+        else:
+            print("Yapue escriba las cosas bien")
 
 
 
 
-
-def guardar_archivos():
+def guardar_archivos(productos):
     print()
