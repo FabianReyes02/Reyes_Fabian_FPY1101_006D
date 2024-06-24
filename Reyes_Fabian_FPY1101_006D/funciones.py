@@ -12,7 +12,7 @@ productos=[]
 def agregar_productos(productos):
     cosas=input("Ingrese el nombre del producto: ")
     productos.append(cosas)
-
+    
 
 
 
