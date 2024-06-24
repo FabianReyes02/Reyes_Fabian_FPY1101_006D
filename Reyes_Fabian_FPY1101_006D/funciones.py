@@ -3,7 +3,7 @@
 
 
 import random
-
+import csv
 productos=[]
 
 
@@ -54,5 +54,8 @@ def eliminar_productos(productos):
 
 
 
-def guardar_archivos(productos):
-    print()
+def guardar_archivos():
+    with open('usuarios.csv', 'w')as usuarios:
+        for i in range(1, len(usuarios)):
+            for j in range(len(usuarios)):
+            
