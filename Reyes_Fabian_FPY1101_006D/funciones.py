@@ -13,15 +13,17 @@ cantidades=[]
 
 
 def agregar_productos():#en esta def definimos agregar productos con la funcion del append a la lista "productos"
-    codigo=input("Ingrese el codigo del producto: ")
-    codigos.append(codigo)
-    producto=input("El nombre del producto: ")
-    productos.append(producto)
-    cantidad=input("Las cantidades a agregar: ")
-    cantidades.append(cantidad)
-    precio=input("El precio neto del producto: ")
-    precios.append(precio)
+        print("Usted va a agregar un producto nuevo.\n")
+        codigo=input("Ingrese el codigo del producto: ")
+        codigos.append(codigo)
+        producto=input("El nombre del producto: ")
+        productos.append(producto)
+        cantidad=input("Las cantidades a agregar: ")
+        cantidades.append(cantidad)
+        precio=input("El precio neto del producto: ")
+        precios.append(precio)
 def ver_productos():#aca hacemos un print de todo lo que es la lista productos
+    print("Usted va a ver todos los productos.\n")
     print(codigos,end="")
     print()
     print(productos,end="")
@@ -31,8 +33,9 @@ def ver_productos():#aca hacemos un print de todo lo que es la lista productos
     print(cantidades,end="")
     print()
 def modificar_productos():
+    print("Usted va a modificar un producto.\n")
     producto=input("Que producto desea modificar: ")
-    if producto not in producto:
+    if producto not in producto():
         print("Producto no encontrado")
     if producto in productos:
         print()
@@ -42,21 +45,25 @@ def modificar_productos():
 
 
 
-def eliminar_productos(productos):
+def eliminar_productos():
+    print("Usted va a eliminar un producto.\n")
     producto=input("Que producto desea eliminar: ")
     if producto not in producto:
         print("Producto no encontrado")
-    if producto in productos:
-        ask=input("Estas seguro de eliminar este producto  Si/No: ")
-        if ask=="Si":
-            productos.remove(producto)
-            print("Esta hecho.")
-        elif ask=="No":
-            print()
-        else:
-            print("Yapue escriba las cosas bien")
+    while True:
+        if producto in productos:
+            ask=input("Estas seguro de eliminar este producto  Si/No: ")
+            if ask=="Si":
+                productos.remove(producto)
+                print("Esta hecho.")
+                break
+            elif ask=="No":
+                print()
+                break
+            else:
+                print("Yapue escriba las cosas bien")
 def guardar_archivos():
-    print()
+    print("Usted va a guardar una colección.\n")
     with open('Reyes_Fabian_FPY1101_006D/usuarios.csv', 'r')as archivo_csv:
         lector_csv=csv.DictReader(archivo_csv)
         productos=list(lector_csv)

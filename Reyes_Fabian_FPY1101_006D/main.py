@@ -10,19 +10,14 @@ while True:
         print("Ingrese una opción valida")    
     else:
         if eleccion==1:
-            print("Usted va a agregar un producto nuevo.\n")
             f.agregar_productos()
         elif eleccion==2:
-            print("Usted va a ver todos los productos.\n")
             f.ver_productos()
         elif eleccion==3:
-            print("Usted va a modificar un producto.\n")
             f.ver_productos()
         elif eleccion==4:
             f.eliminar_productos()
-            print("Usted va a eliminar un producto.\n")
         elif eleccion==5:
-            print("Usted va a guardar una colección.\n")
             f.guardar_archivos()
         elif eleccion==6:
             print("...")
