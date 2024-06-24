@@ -3,7 +3,10 @@
 
 
 import random
+
 codigos=[]
+import csv
+
 productos=[]
 precios=[]
 cantidades=[]
@@ -27,12 +30,6 @@ def modificar_productos():
         print("Producto no encontrado")
     if producto in productos:
         print()
-
-
-
-
-
-
 def eliminar_productos():
     producto=input("Que producto desea eliminar: ")
     if producto not in producto:
@@ -46,9 +43,12 @@ def eliminar_productos():
             print()
         else:
             print("Yapue escriba las cosas bien")
-
-
-
-
 def guardar_archivos():
     print()
+    with open('Reyes_Fabian_FPY1101_006D/usuarios.csv', 'r')as archivo_csv:
+        lector_csv=csv.DictReader(archivo_csv)
+        productos=list(lector_csv)
+        for i in range(1, len(archivo_csv)):
+            for j in range(len(archivo_csv)):
+                print(archivo_csv)
+        print('')
