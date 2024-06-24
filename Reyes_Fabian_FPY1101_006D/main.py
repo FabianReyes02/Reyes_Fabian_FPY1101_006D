@@ -10,7 +10,7 @@ while True:
     else:
         if eleccion==1:
             print("Usted va a agregar un producto nuevo.\n")
-            f.agregar_producotos()
+            f.agregar_productos()
         elif eleccion==2:
             print("Usted va a ver todos los productos.\n")
             f.ver_productos()
