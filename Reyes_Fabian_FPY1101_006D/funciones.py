@@ -1,4 +1,4 @@
-
+#Funciones iniciales hechas por Martin
 
 
 
