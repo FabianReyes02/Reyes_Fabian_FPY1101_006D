@@ -1,5 +1,5 @@
 #Menú principal, Martin Rivas, Fabian Reyes
-import funciones as funciones
+import funciones as f
 import time
 #While para el menu principal del programa
 while True:
@@ -9,15 +9,20 @@ while True:
         print("Ingrese una opción valida")    
     else:
         if eleccion==1:
-            
+            print("Usted va a agregar un producto nuevo.\n")
+            f.agregar_producotos()
         elif eleccion==2:
-
+            print("Usted va a ver todos los productos.\n")
+            f.ver_productos()
         elif eleccion==3:
-
+            print("Usted va a modificar un procuto.\n")
+            f.ver_productos()
         elif eleccion==4:
-        
+            f.eliminar_productos()
+            print("Usted va a eliminar un producto.\n")
         elif eleccion==5:
-
+            print("Usted va a guardar una colección.\n")
+            f.guardar_archivos()
         elif eleccion==6:
             print("...")
             time.sleep(1)
