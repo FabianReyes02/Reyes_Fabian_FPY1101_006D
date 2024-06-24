@@ -22,14 +22,15 @@ def agregar_productos():#en esta def definimos agregar productos con la funcion 
     precio=input("El precio neto del producto: ")
     precios.append(precio)
 def ver_productos():#aca hacemos un print de todo lo que es la lista productos
+    print(codigos,end="")
+    print()
     print(productos,end="")
-print()
-
-
-
-
-
-def modificar_productos(productos):
+    print()
+    print(precios,end="")
+    print()
+    print(cantidades,end="")
+    print()
+def modificar_productos():
     producto=input("Que producto desea modificar: ")
     if producto not in producto:
         print("Producto no encontrado")
